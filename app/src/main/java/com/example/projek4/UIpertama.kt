@@ -1,17 +1,23 @@
 package com.example.projek4
 
+import android.provider.CalendarContract
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.columnMeasurePolicy
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ComposeCompilerApi
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.rememberVectorPainter
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -36,5 +42,22 @@ fun Activitaspertama(modifier: Modifier){
         Spacer(Modifier = Modifier.height(height = 25.dp))
         Card (
             modifier = modifier
+                .height(height = 160.dp)
+                .fillMaxSize(fraction = 1f)
+                .padding(all = 12.dp),
+            colors = CardDefaults.cardColors(
+                containerClors = Color.DarkGray
+            )
 
-        )
+        ){
+            Row(
+                verticalAlignment = Alignment.CenterVertically
+                Image(
+                    Painter = gambar
+                    contentDescription = null,
+                    modifier = modifier
+                        .size(size = 100.dp)
+
+                )
+            )
+        }
