@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.columnMeasurePolicy
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
@@ -22,6 +23,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import kotlinx.coroutines.joinAll
 
 @Composable
 fun Activitaspertama(modifier: Modifier){
@@ -51,12 +53,15 @@ fun Activitaspertama(modifier: Modifier){
 
         ){
             Row(
-                verticalAlignment = Alignment.CenterVertically
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(all = 10.dp)
+            )}
                 Image(
                     Painter = gambar
                     contentDescription = null,
                     modifier = modifier
                         .size(size = 100.dp)
+                        .padding(all = 5.dp)
 
                 )
             )
