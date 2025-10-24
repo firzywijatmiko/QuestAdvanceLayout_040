@@ -20,8 +20,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             Projek4Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    Activitaspertama(
+
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
